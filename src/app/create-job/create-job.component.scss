@@ -1,0 +1,11 @@
+ion-slide::ng-deep {
+    width: 100%;
+    > div::ng-deep {
+        width: calc( 100% - 20px )
+    }
+    ion-label::ng-deep {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+    }
+}

@@ -15,24 +15,31 @@ import {StartComponent} from './start/start.component';
 import {LoginComponent} from './login/login.component';
 import {RegistrationHelperComponent} from './registration-helper/registration-helper.component';
 
-import {ngfModule, ngfFormData} from 'angular-file';
-import {FormsModule} from '@angular/forms';
-import {RegistrationHospitalComponent} from './registration-hospital/registration-hospital.component';
-import {RegistrationConfirmationComponent} from './registration-confirmation/registration-confirmation.component';
+import { ngfModule } from 'angular-file';
+import { FormsModule } from '@angular/forms';
+import { RegistrationHospitalComponent } from './registration-hospital/registration-hospital.component';
+import { RegistrationConfirmationComponent } from './registration-confirmation/registration-confirmation.component';
+import { CreateJobComponent } from './create-job/create-job.component';
+import { JobsNearMeComponent } from './jobs-near-me/jobs-near-me.component';
+import { JobComponent } from './job/job.component';
+import { JobDetailComponent } from './job-detail/job-detail.component';
 import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes: Routes = [
-  {path: '', component: StartComponent},
-  {path: 'registration', component: RegistrationComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'registration/helper', component: RegistrationHelperComponent},
-  {path: 'registration/hospital', component: RegistrationHospitalComponent},
-  {path: 'registration/confirmation', component: RegistrationConfirmationComponent},
+  { path: '', component: StartComponent },
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'registration/helper', component: RegistrationHelperComponent },
+  { path: 'registration/hospital', component: RegistrationHospitalComponent },
+  { path: 'registration/confirmation', component: RegistrationConfirmationComponent },
+  { path: 'create/job', component: CreateJobComponent },
+  { path: 'jobs/near-me', component: JobsNearMeComponent },
+  { path: 'job/detail', component: JobDetailComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent],
-  entryComponents: [],
+  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent, CreateJobComponent, JobsNearMeComponent, JobComponent, JobDetailComponent],
+  entryComponents: [JobComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

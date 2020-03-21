@@ -1,0 +1,14 @@
+<div vvv-page vvv-content pageTitle="Jobs in meiner Nähe">
+    <vvv-job dateFrom='0.02.2019' dateTo='11.02.2020' jobTitle='Bringdienst' jobDescription='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.' distance='20' medicalExperience='Keine'></vvv-job>
+    <vvv-job dateFrom='0.02.2019' dateTo='11.02.2020' jobTitle='Bringdienst' jobDescription='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.' distance='20' medicalExperience='Keine'></vvv-job>
+    <vvv-job dateFrom='0.02.2019' dateTo='11.02.2020' jobTitle='Bringdienst' jobDescription='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.' distance='20' medicalExperience='Keine'></vvv-job>
+    <vvv-job dateFrom='0.02.2019' dateTo='11.02.2020' jobTitle='Bringdienst' jobDescription='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.' distance='20' medicalExperience='Keine'></vvv-job>
+    <vvv-job dateFrom='0.02.2019' dateTo='11.02.2020' jobTitle='Bringdienst' jobDescription='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.' distance='20' medicalExperience='Keine'></vvv-job>
+    <vvv-job dateFrom='0.02.2019' dateTo='11.02.2020' jobTitle='Bringdienst' jobDescription='Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.' distance='20' medicalExperience='Keine'></vvv-job>
+    
+    <ng-container #jobs></ng-container>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadJobs($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Wir laden mehr Jobs für dich...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</div>

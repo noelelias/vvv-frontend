@@ -13,8 +13,6 @@ import {Volunteer} from '../models/Volunteer';
 export class RegistrationHelperComponent implements OnInit {
     formData: any;
 
-    volunteer = new Volunteer();
-
     @ViewChild('profilePictureImg', {static: false})
     profilePictureImg;
 

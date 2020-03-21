@@ -34,11 +34,11 @@
                     <ion-list lines="inset" class="ion-padding-bottom">
                         <ion-item>
                             <ion-label position="floating">Vorname</ion-label>
-                            <ion-input [ngModel]="volunteer.forename"  name="forename" type="text"></ion-input>
+                            <ion-input  name="forename" type="text"></ion-input>
                         </ion-item>
                         <ion-item>
                             <ion-label position="floating">Nachname</ion-label>
-                            <ion-input [ngModel]="volunteer.surname" name="surname" type="text"></ion-input>
+                            <ion-input name="surname" type="text"></ion-input>
                         </ion-item>
                         <ion-item>
                             <ion-label position="floating">PLZ</ion-label>
@@ -57,7 +57,7 @@
                     </ion-list>
                     <ion-button
                         expand="block"
-                        color="primary"
+                        color="secondary"
                         (click)="nextSlide()"
                         >Weiter</ion-button
                     >
@@ -87,9 +87,8 @@
                             <ion-input type="number"></ion-input>
                         </ion-item>
                     </ion-list>
-                    <ion-button expand="block" color="primary" (click)="nextSlide()"
-                        >Weiter</ion-button
-                    >
+                    <ion-button expand="block" color="secondary" (click)="nextSlide()"
+                        >Weiter</ion-button>
                 </div>
             </ion-slide>
             <ion-slide>
