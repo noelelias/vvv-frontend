@@ -21,6 +21,10 @@ export class AppComponent implements OnInit {
       url: '/registration'
     },
     {
+      title: 'Login',
+      url: '/login'
+    },
+    {
       title: 'Registration Helpers',
       url: '/registration/helpers'
     },
