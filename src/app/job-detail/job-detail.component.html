@@ -1,0 +1,39 @@
+<div vvv-page vvv-content pageTitle="Jobs Information">
+	<ion-list lines="none" class="ion-padding-bottom">
+		<ion-item>
+			<ion-label position="stacked">Institut</ion-label>
+			<ion-input [value]="institute" readonly></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Standort</ion-label>
+			<ion-input [value]="location" readonly></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Bezeichnung</ion-label>
+			<ion-input [value]="jobTitle" readonly></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Tätigkeit</ion-label>
+			<ion-textarea [value]="jobDescription" readonly></ion-textarea>
+		</ion-item>
+	</ion-list>
+	<ion-list-header>Job betrifft folgendem Zeitraum</ion-list-header>
+	<ion-list lines="none" class="ion-padding-bottom">
+		<ion-item>
+			<ion-label position="stacked">Von</ion-label>
+			<ion-input [value]="dateFrom" readonly></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label position="stacked">Bis</ion-label>
+			<ion-input [value]="dateTo" readonly></ion-input>
+		</ion-item>
+	</ion-list>
+	<ion-list-header>Anforderungen</ion-list-header>
+	<ion-list lines="none" class="ion-padding-bottom">
+		<ion-item>
+			<ion-label position="stacked">Medizinischer hintergrund</ion-label>
+			<ion-input [value]="medicalExperience" readonly></ion-input>
+		</ion-item>
+	</ion-list>
+	<ion-button expand="block" color="primary">Jetzt bewerben</ion-button>
+</div>

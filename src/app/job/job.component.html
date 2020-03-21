@@ -1,0 +1,13 @@
+<ion-card (click)='showDetail()'>
+    <ion-card-header>
+        <ion-card-subtitle>{{ dateFrom }} - {{ dateTo }}</ion-card-subtitle>
+        <ion-card-title>{{ jobTitle }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>{{ jobDescription }} <br /><br />
+        <strong>Entfernung</strong>
+        <br />{{ distance }} km <br /><br />
+        <strong>Medizinische Erfahrung</strong>
+        <br />
+        {{ medicalExperience }}
+    </ion-card-content>
+</ion-card>

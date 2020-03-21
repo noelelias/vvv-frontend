@@ -1,0 +1,68 @@
+<div vvv-page vvv-content pageTitle="Job erstellen">
+    <form>
+        <ion-slides #slider>
+            <ion-slide>
+                <div>
+                    <ion-item>
+                        <ion-label position="floating">Bezeichnung</ion-label>
+                        <ion-input type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">Tätigkeit</ion-label>
+                        <ion-textarea></ion-textarea>
+                    </ion-item>
+                    <ion-button class="ion-margin-top" expand="block" color="secondary" (click)="nextSlide()">Weiter</ion-button>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div>
+                    <ion-list-header>Job ist Verfügbar ab</ion-list-header>
+                    <ion-list lines="inset" class="ion-padding-bottom">
+                        <ion-item>
+                            <ion-label position="floating">Von</ion-label>
+                            <ion-datetime></ion-datetime>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Bis</ion-label>
+                            <ion-datetime></ion-datetime>
+                        </ion-item>
+                    </ion-list>
+                    <ion-list-header>Tägliche Arbeitszeit</ion-list-header>
+                    <ion-list lines="inset" class="ion-padding-bottom">
+                        <ion-item>
+                            <ion-label position="floating">Von</ion-label>
+                            <ion-datetime displayFormat="hh:mm"></ion-datetime>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Bis</ion-label>
+                            <ion-datetime displayFormat="hh:mm"></ion-datetime>
+                        </ion-item>
+                    </ion-list>
+                    <ion-button expand="block" color="secondary" (click)="nextSlide()">Weiter</ion-button>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div>
+                    <ion-list-header>Medizinische Erfahrung</ion-list-header>
+                    <ion-list>
+                        <ion-radio-group value="studierender">
+                            <ion-item>
+                                <ion-label>Studierender</ion-label>
+                                <ion-radio slot="start" value="studierender"></ion-radio>
+                            </ion-item>
+                            <ion-item>
+                                <ion-label>Auszubildender</ion-label>
+                                <ion-radio slot="start" value="auszubildender"></ion-radio>
+							</ion-item>
+							<ion-item>
+                                <ion-label>Keine</ion-label>
+                                <ion-radio slot="start" value="keine"></ion-radio>
+                            </ion-item>
+                        </ion-radio-group>
+					</ion-list>
+					<ion-button class='ion-margin-top' expand="block" color="primary">Absenden</ion-button>
+				</div>
+            </ion-slide>
+        </ion-slides>
+    </form>
+</div>

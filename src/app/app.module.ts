@@ -21,6 +21,10 @@ import { RegistrationHospitalComponent } from './registration-hospital/registrat
 import { RegistrationConfirmationComponent } from './registration-confirmation/registration-confirmation.component';
 import { ModelToDBService } from './model-to-db.service';
 import { TestDBModelComponent } from './test-dbmodel/test-dbmodel.component';
+import { CreateJobComponent } from './create-job/create-job.component';
+import { JobsNearMeComponent } from './jobs-near-me/jobs-near-me.component';
+import { JobComponent } from './job/job.component';
+import { JobDetailComponent } from './job-detail/job-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: StartComponent },
@@ -29,12 +33,15 @@ const appRoutes: Routes = [
   { path: 'registration/helper', component: RegistrationHelperComponent },
   { path: 'registration/hospital', component: RegistrationHospitalComponent },
   { path: 'registration/confirmation', component: RegistrationConfirmationComponent },
-  { path: 'test/DBModel', component: TestDBModelComponent }
+  { path: 'test/DBModel', component: TestDBModelComponent },
+  { path: 'create/job', component: CreateJobComponent },
+  { path: 'jobs/near-me', component: JobsNearMeComponent },
+  { path: 'job/detail', component: JobDetailComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent, TestDBModelComponent],
-  entryComponents: [],
+  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent, TestDBModelComponent, CreateJobComponent, JobsNearMeComponent, JobComponent, JobDetailComponent],
+  entryComponents: [JobComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot({
