@@ -19,6 +19,8 @@ import { ngfModule, ngfFormData } from "angular-file";
 import { FormsModule } from '@angular/forms';
 import { RegistrationHospitalComponent } from './registration-hospital/registration-hospital.component';
 import { RegistrationConfirmationComponent } from './registration-confirmation/registration-confirmation.component';
+import { ModelToDBService } from './model-to-db.service';
+import { TestDBModelComponent } from './test-dbmodel/test-dbmodel.component';
 
 const appRoutes: Routes = [
   { path: '', component: StartComponent },
@@ -26,11 +28,12 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registration/helper', component: RegistrationHelperComponent },
   { path: 'registration/hospital', component: RegistrationHospitalComponent },
-  { path: 'registration/confirmation', component: RegistrationConfirmationComponent }
+  { path: 'registration/confirmation', component: RegistrationConfirmationComponent },
+  { path: 'test/DBModel', component: TestDBModelComponent }
 ];
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent],
+  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent, TestDBModelComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
