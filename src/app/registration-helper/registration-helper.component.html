@@ -1,49 +1,119 @@
-<div vvv-page vvv-content pageTitle='Helfer Registrierung'>
-    <form onsubmit='processForm(event)'>
-        <ion-card ngfSelect multiple='0' [(files)]='profilePicture' accept='image/*'>
-            <img
-                class='profile-picture'
-                src='/assets/img/profile.jpg'
-            />
-            <ion-card-content>
-                <ion-button color='primary'>Profilbild auswählen</ion-button>
-            </ion-card-content>
-        </ion-card>
-        <ion-list lines='inset' class='ion-padding-bottom'>
-            <ion-item>
-                <ion-label position='floating'>E-Mail Adresse</ion-label>
-                <ion-input type='email' autofocus='true'></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label position='floating'>Passwort</ion-label>
-                <ion-input type='password'></ion-input>
-            </ion-item>
-        </ion-list>
-        <ion-list>
-            <ion-list-header class='ion-padding-bottom'
-                >Ich bin ein</ion-list-header
-            >
-            <ion-item>
-                <ion-segment value='helper'>
-                    <ion-segment-button value='helper'>
-                        <ion-label>Helfer</ion-label>
-                    </ion-segment-button>
-                    <ion-segment-button value='hospital'>
-                        <ion-label>Krankenhaus</ion-label>
-                    </ion-segment-button>
-                </ion-segment>
-            </ion-item>
-        </ion-list>
-        <ion-list lines='none' class='ion-padding-top ion-padding-bottom'>
-            <ion-item>
-                <ion-label position='fixed'>AGB</ion-label>
-                <ion-checkbox slot='start'></ion-checkbox>
-            </ion-item>
-            <ion-item>
-                <ion-label position='fixed'>Datenschutz</ion-label>
-                <ion-checkbox slot='start'></ion-checkbox>
-            </ion-item>
-        </ion-list>
-        <ion-button expand='block' type='submit'>Speichern</ion-button>
+<div vvv-page vvv-content pageTitle="Helfer Registrierung">
+    <form onsubmit="processForm(event)">
+        <ion-slides #slider>
+            <ion-slide>
+                <div>
+                    <input
+                        autofocus="true"
+                        class="profile-picture-selector"
+                        ngfFormData
+                        type="file"
+                        accept="image/*"
+                        (change)="profilePicture($event)"
+                    />
+
+                    <ion-item
+                        class="ion-padding-top ion-padding-bottom"
+                        (click)="openFileSelector()"
+                        lines="none"
+                    >
+                        <ion-avatar slot="start">
+                            <img
+                                #profilePictureImg
+                                class="profile-picture"
+                                src="/assets/img/profile.jpg"
+                            />
+                        </ion-avatar>
+                        <ion-label>
+                            <ion-button color="secondary"
+                                >Profilbild auswählen</ion-button
+                            >
+                        </ion-label>
+                    </ion-item>
+
+                    <ion-list lines="inset" class="ion-padding-bottom">
+                        <ion-item>
+                            <ion-label position="floating">Vorname</ion-label>
+                            <ion-input type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Nachname</ion-label>
+                            <ion-input type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating"
+                                >Geburtsdatum</ion-label
+                            >
+                            <ion-datetime></ion-datetime>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">PLZ</ion-label>
+                            <ion-input type="number"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating"
+                                >Telefonnummer</ion-label
+                            >
+                            <ion-input type="text"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Freitext</ion-label>
+                            <ion-textarea></ion-textarea>
+                        </ion-item>
+                    </ion-list>
+                    <ion-button
+                        expand="block"
+                        color="primary"
+                        (click)="nextSlide()"
+                        >Weiter</ion-button
+                    >
+                </div>
+            </ion-slide>
+            <ion-slide>
+                    <div>
+                    <ion-list-header
+                        ><ion-label
+                            >Verfügbarkeit<br /><small>Täglich</small></ion-label
+                        ></ion-list-header
+                    >
+                    <ion-list lines="inset" class="ion-padding-bottom">
+                        <ion-item>
+                            <ion-label position="floating">Von</ion-label>
+                            <ion-datetime displayFormat="hh:mm"></ion-datetime>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating">Bis</ion-label>
+                            <ion-datetime displayFormat="hh:mm"></ion-datetime>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="floating"
+                                >Verfügbarer Radius
+                                <small>(in Kilometer)</small></ion-label
+                            >
+                            <ion-input type="number"></ion-input>
+                        </ion-item>
+                    </ion-list>
+                    <ion-button expand="block" color="primary" (click)="nextSlide()"
+                        >Weiter</ion-button
+                    >
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div>
+                    <ion-list-header><ion-label>Skills</ion-label></ion-list-header>
+                    <ion-list lines="none">
+                        <ion-item>
+                            <ion-label position="fixed"
+                                >Medizinischer Bereich</ion-label
+                            >
+                            <ion-checkbox slot="end"></ion-checkbox>
+                        </ion-item>
+                    </ion-list>
+                    <ion-button expand="block" color="primary" (click)="nextSlide()"
+                        >Speichern</ion-button
+                    >
+                </div>
+            </ion-slide>
+        </ion-slides>
     </form>
 </div>
