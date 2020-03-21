@@ -16,23 +16,27 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationHelperComponent } from './registration-helper/registration-helper.component';
 
 import { ngfModule, ngfFormData } from "angular-file";
+import { FormsModule } from '@angular/forms';
+import { RegistrationHospitalComponent } from './registration-hospital/registration-hospital.component';
 
 const appRoutes: Routes = [
   { path: '', component: StartComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'registration/helpers', component: RegistrationHelperComponent }
+  { path: 'registration/helper', component: RegistrationHelperComponent },
+  { path: 'registration/hospital', component: RegistrationHospitalComponent }
 ];
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent],
+  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    ngfModule
+    ngfModule,
+    FormsModule
   ],
   providers: [
     StatusBar,

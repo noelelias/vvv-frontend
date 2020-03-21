@@ -13,7 +13,7 @@
 		<ion-list>
 			<ion-list-header class='ion-padding-bottom'>Ich bin ein</ion-list-header>
 			<ion-item>
-				<ion-segment value='helper'>
+				<ion-segment [(ngModel)]='profileType' name='profileType'>
 					<ion-segment-button value='helper'>
 						<ion-label>Helfer</ion-label>
 					</ion-segment-button>
@@ -33,7 +33,7 @@
 				<ion-checkbox slot="start"></ion-checkbox>
 			</ion-item>
 		</ion-list>
-		<ion-button expand='block' type='submit'>Profil erstellen</ion-button
+		<ion-button (click)='createProfile()' expand='block' type='submit'>Profil erstellen</ion-button
 		>
 	</form>
 </div>

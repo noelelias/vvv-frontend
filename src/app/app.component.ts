@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     },
     {
       title: 'Registration Helpers',
-      url: '/registration/helpers'
+      url: '/registration/helper'
     },
     {
       title: 'Registration Hospital',

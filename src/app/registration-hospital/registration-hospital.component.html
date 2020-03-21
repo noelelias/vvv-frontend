@@ -1,0 +1,46 @@
+<div vvv-page vvv-content pageTitle="Krankenhaus Registrierung">
+    <form>
+		<ion-list lines="inset" class="ion-padding-bottom">
+			<ion-item>
+				<ion-label position="floating">Name</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating">Straßse</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating">Hausnummer</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating">PLZ</ion-label>
+				<ion-input type="number"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating">Ort</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating">Telefonnummer</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating">Institution</ion-label>
+				<ion-select value="krankenhaus" interface="popover">
+					<ion-select-option value="krankenhaus">Krankenhaus</ion-select-option>
+					<ion-select-option value="arztpraxis">Arztpraxis</ion-select-option>
+				</ion-select>
+			</ion-item>
+			<ion-item>
+				<ion-label position="floating">Freitext</ion-label>
+				<ion-textarea></ion-textarea>
+			</ion-item>
+		</ion-list>
+		<ion-button
+			expand="block"
+			color="primary"
+			>Speichern</ion-button
+		> 
+    </form>
+</div>
