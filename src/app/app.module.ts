@@ -34,7 +34,9 @@ const appRoutes: Routes = [
   entryComponents: [],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+      mode: 'ios'
+    }),
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     ngfModule,
