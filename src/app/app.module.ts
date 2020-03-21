@@ -18,17 +18,19 @@ import { RegistrationHelperComponent } from './registration-helper/registration-
 import { ngfModule, ngfFormData } from "angular-file";
 import { FormsModule } from '@angular/forms';
 import { RegistrationHospitalComponent } from './registration-hospital/registration-hospital.component';
+import { RegistrationConfirmationComponent } from './registration-confirmation/registration-confirmation.component';
 
 const appRoutes: Routes = [
   { path: '', component: StartComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registration/helper', component: RegistrationHelperComponent },
-  { path: 'registration/hospital', component: RegistrationHospitalComponent }
+  { path: 'registration/hospital', component: RegistrationHospitalComponent },
+  { path: 'registration/confirmation', component: RegistrationConfirmationComponent }
 ];
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent],
+  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

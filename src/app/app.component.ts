@@ -10,37 +10,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public pageTitle = '';
-  public appPages = [
-    {
-      title: 'Start',
-      url: '/'
-    },
-    {
-      title: 'Registration',
-      url: '/registration'
-    },
-    {
-      title: 'Login',
-      url: '/login'
-    },
-    {
-      title: 'Registration Helpers',
-      url: '/registration/helper'
-    },
-    {
-      title: 'Registration Hospital',
-      url: '/registration/hospital'
-    },
-    {
-      title: 'Overview',
-      url: '/overview'
-    },
-    {
-      title: 'Detail',
-      url: '/detail'
-    }
-  ];
 
   constructor(
     private platform: Platform,
@@ -56,10 +25,5 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    const path = window.location.pathname;
-    if (path !== undefined) {
-      this.pageTitle = this.appPages.filter(page => page.url.toLowerCase() === path.toLowerCase())[0].title;
-    }
-  }
+  ngOnInit() {}
 }
