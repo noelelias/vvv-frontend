@@ -1,5 +1,10 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonSlides } from '@ionic/angular';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {IonSlides} from '@ionic/angular';
+import {Institution} from '../models/Institution';
+import {ApiService} from '../services/ApiService';
+import {Router} from '@angular/router';
+import {UserService} from '../services/UserService';
+import {InstitutionService} from '../services/InstitutionService';
 
 @Component({
   selector: 'app-registration-hospital',
@@ -8,7 +13,19 @@ import { IonSlides } from '@ionic/angular';
 })
 export class RegistrationHospitalComponent implements OnInit {
 
-  constructor() { }
+  institution;
 
-  ngOnInit() {}
+  constructor(private api: ApiService, private router: Router, private userService: UserService, private institutionService: InstitutionService) {
+  }
+
+  ngOnInit() {
+    this.institution = new Institution(this.userService.current);
+  }
+
+  save() {
+    this.api.post('/endpoints/institutionProfile/create.php', this.institution).subscribe((inst: Institution) => {
+      this.institutionService.current = inst;
+      this.router.navigate(['/registration/confirmation']);
+    });
+  }
 }

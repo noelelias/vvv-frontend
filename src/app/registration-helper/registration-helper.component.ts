@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, ViewChild } from '@angular/core';
 import { AstMemoryEfficientTransformer } from '@angular/compiler';
 import {IonSlides} from '@ionic/angular';
+import {Institution} from '../models/Institution';
+import {Volunteer} from '../models/Volunteer';
 
 
 @Component({
@@ -10,6 +12,8 @@ import {IonSlides} from '@ionic/angular';
 })
 export class RegistrationHelperComponent implements OnInit {
     formData: any;
+
+    volunteer = new Volunteer();
 
     @ViewChild('profilePictureImg', {static: false})
     profilePictureImg;

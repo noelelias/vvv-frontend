@@ -1,6 +1,8 @@
 import {Component, OnInit, Input, Output} from '@angular/core';
 import {Router} from '@angular/router';
-import {ApiService} from '../model-to-db.service';
+import {ApiService} from '../services/ApiService';
+import {UserService} from '../services/UserService';
+import {User} from '../models/User';
 
 @Component({
   selector: '[vvv-registration]',
@@ -12,7 +14,7 @@ export class RegistrationComponent implements OnInit {
   email = '';
   password = '';
 
-  constructor(private router: Router, private api: ApiService) {
+  constructor(private router: Router, private api: ApiService, private userService: UserService) {
   }
 
   ngOnInit() {
@@ -23,7 +25,8 @@ export class RegistrationComponent implements OnInit {
   }
 
   createProfile() {
-    this.api.register(this.email, this.password).subscribe(() => {
+    this.api.register(this.email, this.password).subscribe((user: User) => {
+      this.userService.current = user;
       if (this.profileType !== 'helper') {
         this.router.navigate(['/registration/hospital']);
       } else {

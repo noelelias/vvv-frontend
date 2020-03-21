@@ -3,44 +3,44 @@
 		<ion-list lines="inset" class="ion-padding-bottom">
 			<ion-item>
 				<ion-label position="floating">Name</ion-label>
-				<ion-input type="text"></ion-input>
+				<ion-input [ngModel]="institution.name" name="name" type="text"></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label position="floating">Straße</ion-label>
-				<ion-input type="text"></ion-input>
+				<ion-input [ngModel]="institution.street" name="steet" type="text"></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label position="floating">Hausnummer</ion-label>
-				<ion-input type="text"></ion-input>
+				<ion-input  [ngModel]="institution.house_number" name="house_number" type="text"></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label position="floating">PLZ</ion-label>
-				<ion-input type="number"></ion-input>
+				<ion-input  [ngModel]="institution.postal_code" name="postal_code" type="number"></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label position="floating">Ort</ion-label>
-				<ion-input type="text"></ion-input>
+				<ion-input  [ngModel]="institution.city" name="city" type="text"></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label position="floating">Telefonnummer</ion-label>
-				<ion-input type="text"></ion-input>
+				<ion-input  [ngModel]="institution.phone_number" name="phone_number" type="text"></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label position="floating">Institution</ion-label>
-				<ion-select value="krankenhaus" okText='Annehmen' cancelText='Abbrechen'>
+				<ion-select okText='Annehmen' cancelText='Abbrechen'>
 					<ion-select-option value="krankenhaus">Krankenhaus</ion-select-option>
 					<ion-select-option value="arztpraxis">Arztpraxis</ion-select-option>
 				</ion-select>
 			</ion-item>
 			<ion-item>
 				<ion-label position="floating">Freitext</ion-label>
-				<ion-textarea></ion-textarea>
+				<ion-textarea [ngModel]="institution.description" name="description"></ion-textarea>
 			</ion-item>
 		</ion-list>
 		<ion-button
 			expand="block"
 			color="primary"
-			routerLink="/registration/confirmation"
+			(click)="save()"
 			>Speichern</ion-button
 		> 
     </form>
