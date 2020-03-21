@@ -42,3 +42,8 @@
     --ion-color-shade: var(--ion-color-vvv-shade);
     --ion-color-tint: var(--ion-color-vvv-tint);
   }
+
+  ion-app {
+    max-width: 380px;
+    margin: 0 auto;
+  }
