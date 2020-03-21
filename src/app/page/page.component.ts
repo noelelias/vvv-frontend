@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'vvv-page',
+  selector: '[vvv-page]',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
 })

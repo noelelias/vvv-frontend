@@ -10,9 +10,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegistrationComponent } from './forms/registration/registration.component';
 import { PageComponent } from './page/page.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, PageComponent],
+  declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

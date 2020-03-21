@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'vvv-registration',
+  selector: '[vvv-registration]',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss'],
 })
