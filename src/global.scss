@@ -10,40 +10,61 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+@import '~@ionic/angular/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
 
 :root {
     --ion-color-vvv: #e74c32;
-    --ion-color-vvv-rgb: 231,76,50;
+    --ion-color-vvv-rgb: 231, 76, 50;
     --ion-color-vvv-contrast: #ffffff;
-    --ion-color-vvv-contrast-rgb: 255,255,255;
+    --ion-color-vvv-contrast-rgb: 255, 255, 255;
     --ion-color-vvv-shade: #cb432c;
     --ion-color-vvv-tint: #e95e47;
-  }
-  
-  .ion-color-vvv {
+}
+
+.ion-color-vvv {
     --ion-color-base: var(--ion-color-vvv);
     --ion-color-base-rgb: var(--ion-color-vvv-rgb);
     --ion-color-contrast: var(--ion-color-vvv-contrast);
     --ion-color-contrast-rgb: var(--ion-color-vvv-contrast-rgb);
     --ion-color-shade: var(--ion-color-vvv-shade);
     --ion-color-tint: var(--ion-color-vvv-tint);
-  }
+}
 
-  ion-app {
-    max-width: 380px;
-    margin: 0 auto;
-  }
+@media screen and (min-width: 500px) {
+	.box1 {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		> * {
+			width: 300px;
+		}
+	}
+	.box2 {
+		display: flex;
+		justify-content: flex-end;
+		> * {
+			flex-basis: 300px;
+			flex-grow: 0;
+			margin: 0;
+		}
+	}
+	.desktopImprovements {
+		width: 400px;
+		height: 100vh;
+		margin: 0 auto;
+		position: relative;
+	}
+}
