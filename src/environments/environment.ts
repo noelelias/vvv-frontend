@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBase: 'http://localhost/backend/',
+  apiBase: 'https://api.volunteervsvirus.de/',
 };
 
 /*

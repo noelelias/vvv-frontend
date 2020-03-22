@@ -23,7 +23,7 @@ export class RegistrationHospitalComponent implements OnInit {
   }
 
   save() {
-    this.api.post('https://api.volunteervsvirus.de/endpoints/institutionProfile/create.php', this.institution).subscribe((inst: Institution) => {
+    this.api.post('endpoints/institutionProfile/create.php', this.institution).subscribe((inst: Institution) => {
       this.institutionService.current = inst;
       this.router.navigate(['/registration/confirmation']);
     });
