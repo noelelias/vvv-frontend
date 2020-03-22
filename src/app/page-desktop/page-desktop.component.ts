@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageComponent } from '../page/page.component';
+import { DesktopMobileSwitcherService } from '../services/DesktopMobileSwitcher.service';
 
 @Component({
   selector: 'app-page-desktop',
@@ -8,8 +9,9 @@ import { PageComponent } from '../page/page.component';
 })
 export class PageDesktopComponent extends PageComponent implements OnInit {
 
-  constructor() {
+  constructor(DesktopMobileSwitcherService: DesktopMobileSwitcherService) {
     super();
+    DesktopMobileSwitcherService.switchToDesktop();
   }
 
   ngOnInit() {}

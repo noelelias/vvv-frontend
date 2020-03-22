@@ -34,17 +34,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
-const appRoutes: Routes = [
-    { path: '', component: StartComponent },
-    { path: 'registration', component: RegistrationComponent },
-    { path: 'login', component: LoginComponent },
-    { path: 'registration/helper', component: RegistrationHelperComponent },
-    { path: 'registration/hospital', component: RegistrationHospitalComponent },
-    { path: 'registration/confirmation', component: RegistrationConfirmationComponent },
-    { path: 'create/job', component: CreateJobComponent },
-    { path: 'jobs/near-me', component: JobsNearMeComponent },
-    { path: 'job/detail', component: JobDetailComponent }
-];
+const appRoutes: Routes = [];
 
 @NgModule({
     declarations: [AppComponent, RegistrationComponent, PageComponent, ContentComponent, StartComponent, LoginComponent, RegistrationHelperComponent, RegistrationHospitalComponent, RegistrationConfirmationComponent, CreateJobComponent, JobsNearMeComponent, JobComponent, JobDetailComponent, PageDesktopComponent, StartDesktopComponent],

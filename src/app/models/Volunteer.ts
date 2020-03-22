@@ -24,11 +24,11 @@ export class Volunteer {
     this._driving_license = value;
   }
 
-  get medical_experience(): number {
+  get medical_experience(): boolean {
     return this._medical_experience;
   }
 
-  set medical_experience(value: number) {
+  set medical_experience(value: boolean) {
     this._medical_experience = value;
   }
 
@@ -63,6 +63,6 @@ export class Volunteer {
   private time_to: number;
   private _radius: number;
   private _driving_license: boolean;
-  private _medical_experience: number;
+  private _medical_experience: boolean;
 
 }

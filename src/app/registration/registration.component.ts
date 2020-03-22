@@ -4,6 +4,7 @@ import { ApiService } from '../services/ApiService';
 import { UserService } from '../services/UserService';
 import { User } from '../models/User';
 import { toastController } from '@ionic/core';
+import { DesktopMobileSwitcherService } from '../services/DesktopMobileSwitcher.service';
 
 @Component({
     selector: '[vvv-registration]',
@@ -19,7 +20,9 @@ export class RegistrationComponent implements OnInit {
         privacy: false
     };
 
-    constructor(private router: Router, private api: ApiService, private userService: UserService) {}
+    constructor(private router: Router, private api: ApiService, private userService: UserService, private DesktopMobileSwitcherService: DesktopMobileSwitcherService) {
+        this.DesktopMobileSwitcherService.switchToMobile(); // no desktop support
+    }
 
     ngOnInit() {}
 
