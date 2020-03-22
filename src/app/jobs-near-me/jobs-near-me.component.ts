@@ -8,7 +8,7 @@ import { async, timeout } from 'q';
     styleUrls: ['./jobs-near-me.component.scss']
 })
 export class JobsNearMeComponent implements OnInit {
-	@ViewChild('jobs', { read: ViewContainerRef, static: false })
+	@ViewChild('jobs', { read: ViewContainerRef })
 	jobs: ViewContainerRef
 
     constructor(private componentFactoryResolver: ComponentFactoryResolver) {}

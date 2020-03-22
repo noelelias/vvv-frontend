@@ -13,10 +13,10 @@ import {Volunteer} from '../models/Volunteer';
 export class RegistrationHelperComponent implements OnInit {
     formData: any;
 
-    @ViewChild('profilePictureImg', {static: false})
+    @ViewChild('profilePictureImg')
     profilePictureImg;
 
-    @ViewChild('slider', {static: false})
+    @ViewChild('slider')
     slides: IonSlides;
 
     constructor() {}

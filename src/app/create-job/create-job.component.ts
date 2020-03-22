@@ -8,7 +8,7 @@ import { IonSlides } from '@ionic/angular';
 })
 export class CreateJobComponent implements OnInit {
 
-  @ViewChild('slider', {static: false})
+  @ViewChild('slider')
   slides: IonSlides;
 
   constructor() { }
