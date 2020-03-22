@@ -23,8 +23,8 @@ export class RegistrationHospitalComponent implements OnInit {
   }
 
   save() {
-    this.api.post('endpoints/institutionProfile/create.php', this.institution).subscribe((inst: Institution) => {
-      this.institutionService.current = inst;
+    this.api.post('endpoints/institutionProfile/create.php', this.institution).subscribe((inst: string) => {
+      this.institutionService.current = JSON.parse(inst) as Institution;
       this.router.navigate(['/registration/confirmation']);
     });
   }
