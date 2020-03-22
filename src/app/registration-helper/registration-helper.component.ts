@@ -3,6 +3,12 @@ import { AstMemoryEfficientTransformer } from '@angular/compiler';
 import {IonSlides} from '@ionic/angular';
 import {Institution} from '../models/Institution';
 import {Volunteer} from '../models/Volunteer';
+import { ApiService } from '../services/ApiService';
+import { timeInterval } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { UserService } from '../services/UserService';
+import { VolunteerService } from '../services/VolunteerService';
+import { User } from '../models/User';
 
 
 @Component({
@@ -11,7 +17,18 @@ import {Volunteer} from '../models/Volunteer';
     styleUrls: ['./registration-helper.component.scss']
 })
 export class RegistrationHelperComponent implements OnInit {
-    formData: any;
+    form = {
+        time_from: '',
+        time_to: '',
+        radius: 0,
+        postal_code: '',
+        drivinglicense: '',
+        medical_experience: '',
+        firstname: '',
+        lastname: '',
+        phone: '',
+        freetext: ''
+    };
 
     @ViewChild('profilePictureImg')
     profilePictureImg;
@@ -19,7 +36,7 @@ export class RegistrationHelperComponent implements OnInit {
     @ViewChild('slider')
     slides: IonSlides;
 
-    constructor() {}
+    constructor(private api: ApiService, private router: Router, private volunteerService: VolunteerService, private userService: UserService) {}
 
     ngOnInit() {}
 
@@ -41,5 +58,15 @@ export class RegistrationHelperComponent implements OnInit {
 
     nextSlide() {
         this.slides.slideNext();
+    }
+
+    updateProfile() {
+        this.api.registerHelper(this.form.time_from, this.form.time_to, this.form.radius, this.form.postal_code, this.form.drivinglicense, parseInt(this.form.medical_experience)).subscribe((volunteer: string) => {
+            this.volunteerService.current = JSON.parse(volunteer) as Volunteer;
+            this.api.extendRegister(this.form.firstname, this.form.lastname).subscribe((user: string) => {
+                this.userService.current = JSON.parse(user) as User;
+                this.router.navigate(['/registration/confirmation']);
+            });
+        });
     }
 }

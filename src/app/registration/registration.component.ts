@@ -37,8 +37,8 @@ export class RegistrationComponent implements OnInit {
     createProfile() {
         if (!this.validate()) return;
 
-        this.api.register(this.form.email, this.form.password).subscribe((user: User) => {
-            this.userService.current = user;
+        this.api.register(this.form.email, this.form.password).subscribe((user: string) => {
+            this.userService.current = JSON.parse(user) as User;
             if (this.form.profileType !== 'helper') {
                 this.router.navigate(['/registration/hospital']);
             } else {

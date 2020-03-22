@@ -17,14 +17,12 @@ export class ApiService {
     }
 
     post(url: string, body: any) {
-		const returnObservable = this.http.post(environment.apiBase + url, body).pipe(catchError( (err, caght) => {
-				toastController.create({message: err?.error?.messages?.join(' - ')}).then(toast=>toast.present());
+		const returnObservable = this.http.post(environment.apiBase + url, body, {responseType: 'text'}).pipe(catchError( (err, caght) => {
+                console.log(err);
+				toastController.create({message: JSON.parse(err?.error)?.messages?.join(' - '), duration: 1000}).then(toast=>toast.present());
 				return throwError(err);
 			}
-		));
-        returnObservable.subscribe(data => {
-            console.log(data);
-        });
+        ));
         return returnObservable;
     }
 
@@ -34,5 +32,13 @@ export class ApiService {
 
     register(email: string, password: string) {
         return this.post('endpoints/auth/register.php', { email, pass: password });
+    }
+
+    registerHelper(time_from: string, time_to: string, radius: number, postal_code: string, drivinglicense: string, medical_experience: number) {
+        return this.post('endpoints/volunteerProfile/create.php', { 'time_from':time_from, 'time_to':time_to, 'radius':radius, 'postal_code': postal_code, 'drivinglicense':drivinglicense, 'medical_experience':medical_experience });
+    }
+
+    extendRegister(forename: string, surname: string) {
+        return this.post('endpoints/auth/register.php', { 'forename': forename, 'surname': surname });
     }
 }

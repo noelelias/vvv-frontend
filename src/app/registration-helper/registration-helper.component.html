@@ -34,25 +34,23 @@
                     <ion-list lines="inset" class="ion-padding-bottom">
                         <ion-item>
                             <ion-label position="floating">Vorname</ion-label>
-                            <ion-input  name="forename" type="text"></ion-input>
+                            <ion-input  name="firstname" type="text" [(ngModel)]='form.firstname'></ion-input>
                         </ion-item>
                         <ion-item>
                             <ion-label position="floating">Nachname</ion-label>
-                            <ion-input name="surname" type="text"></ion-input>
+                            <ion-input name="lastname" type="text" [(ngModel)]='form.lastname'></ion-input>
                         </ion-item>
                         <ion-item>
                             <ion-label position="floating">PLZ</ion-label>
-                            <ion-input type="number"></ion-input>
+                            <ion-input type="number" [(ngModel)]='form.plz' name='plz'></ion-input>
                         </ion-item>
                         <ion-item>
-                            <ion-label position="floating"
-                                >Telefonnummer</ion-label
-                            >
-                            <ion-input type="text"></ion-input>
+                            <ion-label position="floating">Telefonnummer</ion-label>
+                            <ion-input type="text" [(ngModel)]='form.phone' name='phone'></ion-input>
                         </ion-item>
                         <ion-item>
                             <ion-label position="floating">Freitext</ion-label>
-                            <ion-textarea></ion-textarea>
+                            <ion-textarea [(ngModel)]='form.freetext' name='freetext'></ion-textarea>
                         </ion-item>
                     </ion-list>
                     <ion-button
@@ -73,18 +71,18 @@
                     <ion-list lines="inset" class="ion-padding-bottom">
                         <ion-item>
                             <ion-label position="floating">Von</ion-label>
-                            <ion-datetime displayFormat="hh:mm"></ion-datetime>
+                            <ion-datetime displayFormat="hh:mm" [(ngModel)]='form.time_from' name='time_from'></ion-datetime>
                         </ion-item>
                         <ion-item>
                             <ion-label position="floating">Bis</ion-label>
-                            <ion-datetime displayFormat="hh:mm"></ion-datetime>
+                            <ion-datetime displayFormat="hh:mm" [(ngModel)]='form.time_to' name='time_to'></ion-datetime>
                         </ion-item>
                         <ion-item>
                             <ion-label position="floating"
                                 >Verfügbarer Radius
                                 <small>(in Kilometer)</small></ion-label
                             >
-                            <ion-input type="number"></ion-input>
+                            <ion-input type="number" [(ngModel)]='form.radius' name='radius'></ion-input>
                         </ion-item>
                     </ion-list>
                     <ion-button expand="block" color="secondary" (click)="nextSlide()"
@@ -97,12 +95,16 @@
                     <ion-list lines="none">
                         <ion-item>
                             <ion-label position="fixed"
-                                >Medizinischer Bereich</ion-label
-                            >
-                            <ion-checkbox slot="end"></ion-checkbox>
+                                >Medizinischer Bereich</ion-label>
+                            <ion-checkbox slot="end" [(ngModel)]='form.medical_experience' name='medical_experience'></ion-checkbox>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label position="fixed"
+                                >Führerschein Klasse B</ion-label>
+                            <ion-checkbox slot="end" [(ngModel)]='form.drivinglicense' name='drivinglicense'></ion-checkbox>
                         </ion-item>
                     </ion-list>
-                    <ion-button expand="block" color="primary" routerLink="/registration/confirmation"
+                    <ion-button expand="block" color="primary" (click)='updateProfile()'
                         >Speichern</ion-button
                     >
                 </div>
