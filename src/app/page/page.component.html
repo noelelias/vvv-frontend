@@ -1,9 +1,16 @@
 <ion-header translucent>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-title>{{ pageTitle }}</ion-title>
+        <ion-title>
+            <img src="/assets/img/logo.png" alt="VolunteerVsVirus logo" height="44px"
+                 style="position: relative; top: 2px; filter: brightness(0) invert()">
+
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button auto-hide="false"></ion-menu-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 <ion-content>

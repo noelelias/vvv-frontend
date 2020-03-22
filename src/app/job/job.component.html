@@ -3,11 +3,23 @@
         <ion-card-subtitle>{{ dateFrom }} - {{ dateTo }}</ion-card-subtitle>
         <ion-card-title>{{ jobTitle }}</ion-card-title>
     </ion-card-header>
-    <ion-card-content>{{ jobDescription }} <br /><br />
-        <strong>Entfernung</strong>
-        <br />{{ distance }} km <br /><br />
-        <strong>Medizinische Erfahrung</strong>
-        <br />
-        {{ medicalExperience }}
+    <ion-card-content>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    {{ jobDescription }}
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <strong>Entfernung</strong>
+                    <p>{{ distance }} km </p>
+                </ion-col>
+                <ion-col>
+                    <strong>Voraussetzungen</strong>
+                    <p>{{ medicalExperience }}</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
     </ion-card-content>
 </ion-card>
