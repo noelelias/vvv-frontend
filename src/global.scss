@@ -67,4 +67,33 @@
 		margin: 0 auto;
 		position: relative;
 	}
+	.box4 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 40px;
+		> mat-card {
+			width: 300px;
+			height: auto;
+			display: table;
+			> img {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+	.box5 {
+		width: 300px;
+		display: flex;
+		justify-content: space-around;
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		z-index: 1000;
+		padding: 20px;
+		background: #e75d58;
+		border-radius: 13px;
+		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	}
 }

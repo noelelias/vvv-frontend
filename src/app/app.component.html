@@ -1,5 +1,4 @@
-<ion-app>
-	<div class='desktopImprovements'>
-		<ion-router-outlet></ion-router-outlet>
-	</div>
+<ion-app *ngIf="!isDesktop">
+	<ion-router-outlet></ion-router-outlet>
 </ion-app>
+<router-outlet *ngIf="isDesktop"></router-outlet>
