@@ -25,7 +25,7 @@ All the different pages and components on these pages. You can find them in the 
 ### How to contribute
 1. fork the project into your account
 1. pull the forked project to local
-1. run `$ yarn install`
-1. run `$ npm run start` to start the development server. It will be accessible under *http://localhost:4200*
+1. run `$ npx npm-force-resolutions && npm install && npm run build`
+1. run `$ ionic serve --port=80` to start the development server. It will be accessible under *http://localhost:8100*
 1. commit and push
 1. open a pull request into this repo
