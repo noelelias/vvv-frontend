@@ -3,17 +3,17 @@
 		<ion-list lines='inset' class='ion-padding-bottom'>
 			<ion-item>
 				<ion-label position='floating'>E-Mail Adresse</ion-label>
-				<ion-input [(ngModel)]='email' name="email" type='email' autofocus=true></ion-input>
+				<ion-input [(ngModel)]='form.email' name="email" type='email' autofocus=true></ion-input>
 			</ion-item>
 			<ion-item>
 				<ion-label position='floating'>Passwort</ion-label>
-				<ion-input [(ngModel)]='password' name="password" type='password'></ion-input>
+				<ion-input [(ngModel)]='form.password' name="password" type='password'></ion-input>
 			</ion-item>
 		</ion-list>
 		<ion-list>
 			<ion-list-header class='ion-padding-bottom'>Ich bin ein</ion-list-header>
 			<ion-item>
-				<ion-segment [(ngModel)]='profileType' name='profileType'>
+				<ion-segment [(ngModel)]='form.profileType' name='profileType'>
 					<ion-segment-button value='helper'>
 						<ion-label>Helfer</ion-label>
 					</ion-segment-button>
@@ -26,11 +26,11 @@
 		<ion-list lines='none' class='ion-padding-top ion-padding-bottom'>
 			<ion-item>
 				<ion-label position='fixed'>AGB</ion-label>
-				<ion-checkbox slot="start"></ion-checkbox>
+				<ion-checkbox slot="start" [(ngModel)]='form.tos' name='tos'></ion-checkbox>
 			</ion-item>
 			<ion-item>
 				<ion-label position='fixed'>Datenschutz</ion-label>
-				<ion-checkbox slot="start"></ion-checkbox>
+				<ion-checkbox slot="start" [(ngModel)]='form.privacy' name='privacy'></ion-checkbox>
 			</ion-item>
 		</ion-list>
 		<ion-button (click)='createProfile()' expand='block' type='submit'>Profil erstellen</ion-button>
