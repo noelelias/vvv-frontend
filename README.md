@@ -19,13 +19,13 @@ All the different pages and components on these pages. You can find them in the 
 *e.g. login*
 
 ### How to run
-1. run `$ yarn install` to install the dependencies
-1. then run `$ npm run build` to compile into the *www* directory
+1. run `$ npx npm-force-resolutions && npm install && npm run build` to install the dependencies
+1. then run `$ ionic serve` to compile into the *www* directory
 
 ### How to contribute
 1. fork the project into your account
 1. pull the forked project to local
 1. run `$ npx npm-force-resolutions && npm install && npm run build`
-1. run `$ ionic serve --port=80` to start the development server. It will be accessible under *http://localhost:8100*
+1. run `$ ionic serve` to start the development server. It will be accessible under *http://localhost:8100*
 1. commit and push
 1. open a pull request into this repo
