@@ -94,8 +94,6 @@ export class Institution {
     this._name = value;
   }
 
-  static ENDPOINT_PATH = '/endpoints/institutionProfile';
-
   private _id: number;
   private _name: string;
   private _street: string;

@@ -56,8 +56,6 @@ export class Volunteer {
     this._date_form = value;
   }
 
-  static ENDPOINT_PATH = '/endpoints/volunteer';
-
   private _id: number;
   private _date_form: Date;
   private _date_to: Date;

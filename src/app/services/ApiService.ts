@@ -19,11 +19,11 @@ export class ApiService {
   }
 
   login(email: string, password: string) {
-    return this.post('endpoints/auth/login.php', {email, pass: password});
+    return this.post('https://api.volunteervsvirus.de/endpoints/auth/login.php', {email, pass: password});
   }
 
   register(email: string, password: string) {
-    return this.post('endpoints/auth/register.php', {email, pass: password});
+    return this.post('https://api.volunteervsvirus.de/endpoints/auth/register.php', {email, pass: password});
   }
 
 }
